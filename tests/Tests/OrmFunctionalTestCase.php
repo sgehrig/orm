@@ -485,6 +485,12 @@ abstract class OrmFunctionalTestCase extends OrmTestCase
             Models\Issue9300\Issue9300Child::class,
             Models\Issue9300\Issue9300Parent::class,
         ],
+        'nativeLazy' => [
+            Models\NativeLazy\TransactionImport::class,
+            Models\NativeLazy\ImportedTransaction::class,
+            Models\NativeLazy\Account::class,
+            Models\NativeLazy\AccountTransaction::class,
+        ],
     ];
 
     /** @param class-string ...$models */
