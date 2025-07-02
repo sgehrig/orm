@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\JoinColumn;
 use Doctrine\ORM\Mapping\ManyToOne;
 
-#[Entity]
+#[Entity(repositoryClass: AccountTransactionRepository::class)]
 class AccountTransaction extends Transaction
 {
     #[Id]

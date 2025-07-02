@@ -56,7 +56,8 @@ class NativeLazyTest extends OrmFunctionalTestCase
 
     public function testDeleteAccountTransaction(): void
     {
-        $accountTransaction = $this->_em->find(AccountTransaction::class, $this->accountTransactionId);
+        $accountTransaction = $this->_em->getRepository(AccountTransaction::class)
+                                        ->findById($this->accountTransactionId);
         self::assertInstanceOf(AccountTransaction::class, $accountTransaction);
 
         $importedTransaction = $accountTransaction->getSourceTransaction();
